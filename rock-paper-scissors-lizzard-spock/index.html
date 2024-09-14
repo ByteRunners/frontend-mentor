@@ -3,35 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta
+    name="description"
+    content="Rock paper scissors lizard spock."
+  />
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
+  <script src="js/index.js" defer></script>
+  
+  <title>Rock, Paper, Scissors</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
+  <div class="top-section">
+    <img class="logo" src="./images/logo-bonus.svg" alt="" />
 
+    <div class="score-container">
+      <div class="score-label">score</div>
+      <div id="score" class="score-value">0</div>
+    </div>
+  </div>
 
-  
+  <div id="rules-overlay" class="rules-overlay">
+    <div id="rules-card" class="rules-card">
+      <div class="rules-card-header">
+        <div class="rules-label">RULES</div>
+        <button id="close-rules-btn" class="close-btn">
+          <img class="close-img" src="./images/icon-close.svg" alt="" />
+        </button>
+      </div>
+      <img class="rules-img" src="./images/image-rules-bonus.svg" alt="" />
+    </div>
+  </div>
+
+  <!-- Stage 1 -->
+  <div id="stage-one-container" class="stage-one-container">
+    <img class="bg-pentagon" src="./images/bg-pentagon.svg" alt="" />
+
+    <button id="scissors" class="icon-container">
+      <div class="icon-container-inner">
+        <img
+          class="icon-image"
+          src="./images/icon-scissors.svg"
+          alt="Choose Scissors"
+        />
+      </div>
+    </button>
+
+    <button id="paper" class="icon-container">
+      <div class="icon-container-inner">
+        <img
+          class="icon-image"
+          src="./images/icon-paper.svg"
+          alt="Choose Paper"
+        />
+      </div>
+    </button>
+
+    <button id="rock" class="icon-container">
+      <div class="icon-container-inner">
+        <img
+          class="icon-image"
+          src="./images/icon-rock.svg"
+          alt="Choose Rock"
+        />
+      </div>
+    </button>
+
+    <button id="lizard" class="icon-container">
+      <div class="icon-container-inner">
+        <img
+          class="icon-image"
+          src="./images/icon-lizard.svg"
+          alt="Choose Lizard"
+        />
+      </div>
+    </button>
+
+    <button id="spock" class="icon-container">
+      <div class="icon-container-inner">
+        <img
+          class="icon-image"
+          src="./images/icon-spock.svg"
+          alt="Choose Spock"
+        />
+      </div>
+    </button>
+  </div>
+
+  <!-- Stage 2 -->
+  <div id="stage-two-container" class="stage-two-container">
+    <div class="player-container">
+      <div class="outcome-label">YOU PICKED</div>
+      <div id="player-ripple-container"></div>
+      <div id="player-piece-container">
+        <div class="icon-container-s2-empty">
+          <div class="icon-container-inner-s2-empty"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="outcome-container" class="outcome-container">
+      <!-- <div id="result-display" class="outcome-text"></div>
+      <button id="play-again-btn" class="play-again-btn">PLAY AGAIN</button> -->
+    </div>
+
+    <div class="house-container">
+      <div class="outcome-label">THE HOUSE PICKED</div>
+      <div id="house-ripple-container"></div>
+      <div id="house-piece-container">
+        <div class="icon-container-s2-empty">
+          <div class="icon-container-inner-s2-empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="outcome-container-mobile" class="outcome-container"></div>
+
+  <!-- End of game-container-->
+
+  <button id="rules-btn" class="rules-btn">RULES</button>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://ahmadalrai.com">Ahmad Alrai</a>.
   </div>
 </body>
 </html>
